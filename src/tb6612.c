@@ -30,8 +30,11 @@ void Set_TB6612_Dir(uint8_t motor, uint8_t dir, uint16_t pulse)
             if (motor == MOTOR_A)
             {
                 pin_set(PIN_AIN1);
+                pin_set(PIN_BIN1);
                 pin_set(PIN_AIN2);
+                pin_set(PIN_BIN2);
                 pwm_a(0);
+                pwm_b(0);
             }
             else
             {
@@ -46,8 +49,11 @@ void Set_TB6612_Dir(uint8_t motor, uint8_t dir, uint16_t pulse)
             if (motor == MOTOR_A)
             {
                 pin_clear(PIN_AIN1);
+                pin_clear(PIN_BIN1);
                 pin_set(PIN_AIN2);
+                pin_set(PIN_BIN2);
                 pwm_a(pulse);
+                pwm_b(pulse);
             }
             else
             {
@@ -62,8 +68,11 @@ void Set_TB6612_Dir(uint8_t motor, uint8_t dir, uint16_t pulse)
             if (motor == MOTOR_A)
             {
                 pin_set(PIN_AIN1);
+                pin_set(PIN_BIN1);
                 pin_clear(PIN_AIN2);
+                pin_clear(PIN_BIN2);
                 pwm_a(pulse);
+                pwm_b(pulse);
             }
             else
             {
@@ -78,8 +87,11 @@ void Set_TB6612_Dir(uint8_t motor, uint8_t dir, uint16_t pulse)
             if (motor == MOTOR_A)
             {
                 pin_clear(PIN_AIN1);
+                pin_clear(PIN_BIN1);
                 pin_clear(PIN_AIN2);
+                pin_clear(PIN_BIN2);
                 pwm_a(0);
+                pwm_b(0);    
             }
             else
             {
